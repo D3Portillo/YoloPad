@@ -10,6 +10,11 @@ export default {
   theme: {
     extend: {
       colors: {
+        yolo: {
+          blue: {
+            DEFAULT: "#0033EE",
+          },
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
