@@ -9,10 +9,39 @@ export default {
   ],
   theme: {
     extend: {
+      opacity: {
+        7: "0.07",
+        3: "0.03",
+      },
+      zIndex: {
+        1: "1",
+        2: "2",
+        3: "3",
+      },
       colors: {
         yolo: {
           blue: {
             DEFAULT: "#0033EE",
+            light: "#668CFF", // Lighter blue for contrast
+            dark: "#001A80", // Deeper blue for contrast
+          },
+          green: {
+            DEFAULT: "#00FF66",
+            lime: "#A7FF00",
+            mint: "#66FFC2", // Fresh, lighter green
+            dark: "#007733", // Richer green for depth
+          },
+          purple: {
+            DEFAULT: "#8000FF", // Vivid purple to contrast blue/green
+            soft: "#C299FF", // Softer pastel purple
+          },
+          yellow: {
+            DEFAULT: "#FFCC00", // Bright energy, fits Yolo’s vibe
+            soft: "#FFE680", // Softer, pastel yellow
+          },
+          pink: {
+            DEFAULT: "#FF007F", // Vibrant, fun pop color
+            soft: "#FF99C2", // Softer pink for balance
           },
         },
         background: "hsl(var(--background))",
