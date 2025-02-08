@@ -7,7 +7,6 @@ import { useAccount } from "wagmi"
 export default function ConnectedOnlyAction({
   children,
 }: {
-  mustConnect?: boolean
   children: ReactElement
 }) {
   const { isConnected } = useAccount()

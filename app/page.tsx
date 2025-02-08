@@ -3,6 +3,7 @@ import { Fragment } from "react"
 
 import { FaArrowRight } from "react-icons/fa6"
 import MainContainer from "@/components/MainContainer"
+import ModalCreateProject from "@/components/ModalCreateProject"
 
 export default function PageHome() {
   return (
@@ -21,10 +22,14 @@ export default function PageHome() {
             </p>
 
             <nav className="mt-6 flex gap-4">
-              <button className="group text-lg text-yolo-blue flex items-center gap-4 border-yolo-blue border-2 rounded-full px-8 py-3 font-bold">
-                <span>Create Web3 Project</span>
-                <FaArrowRight className="scale-110 group-hover:translate-x-px" />
-              </button>
+              <ModalCreateProject
+                trigger={
+                  <button className="group text-lg text-yolo-blue flex items-center gap-4 border-yolo-blue border-2 rounded-full px-8 py-3 font-bold">
+                    <span>Create Web3 Project</span>
+                    <FaArrowRight className="scale-110 group-hover:translate-x-px" />
+                  </button>
+                }
+              />
 
               <Link
                 href="/tools"

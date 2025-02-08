@@ -44,7 +44,7 @@ function AccountMenu({
 
         <DropdownMenuGroup>
           <DropdownMenuItem className="px-3 py-2" asChild>
-            <Link href="/">
+            <Link href="/profile">
               <div className="size-4 grid place-items-center mr-3">
                 <MdOutlineManageAccounts className="scale-[1.15]" />
               </div>
@@ -53,7 +53,7 @@ function AccountMenu({
           </DropdownMenuItem>
 
           <DropdownMenuItem className="px-3 py-2" asChild>
-            <Link href="/">
+            <Link href="/profile">
               <div className="size-4 grid place-items-center mr-3">
                 <MdAccountBalance className="scale-110" />
               </div>
@@ -62,7 +62,7 @@ function AccountMenu({
           </DropdownMenuItem>
 
           <DropdownMenuItem className="px-3 py-2" asChild>
-            <Link href="/">
+            <Link href="/profile">
               <div className="size-4 grid place-items-center mr-3">
                 <PiRocketLaunchFill className="scale-110" />
               </div>
