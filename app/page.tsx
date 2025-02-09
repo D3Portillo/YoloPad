@@ -63,14 +63,42 @@ export default function PageHome() {
           </nav>
 
           <section className="grid gap-6 mt-8 grid-cols-5">
-            {Array.from({ length: 5 }).map((_, index) => (
+            {[
+              {
+                name: "Telegram App",
+                image:
+                  "https://sofy.ai/wp-content/uploads/2024/04/Developing-Eco-Friendly-App.png",
+              },
+              {
+                name: "OZZ Game",
+                image:
+                  "https://cdn.prod.website-files.com/63dfff3a678a17296427944f/64308e3011af0db9f0826bd9_Feature%20Image.png",
+              },
+              {
+                name: "EZ Money",
+                image:
+                  "https://solveit.dev/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdXNFIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0027ecc9eea77cb03d37f5208fd69e8c62ba3818/cover2Social%20Media%20App-min.jpg",
+              },
+              {
+                name: "Pidu Learn",
+                image:
+                  "https://i.pinimg.com/736x/06/b0/f9/06b0f914991d871736a7bcf09226fa06.jpg",
+              },
+            ].map((project) => (
               <div
-                key={`item-${index}`}
+                key={`item-${project.image}`}
                 className="bg-white border rounded-xl overflow-hidden"
               >
-                <figure className="bg-yolo-blue/7 border-b w-full h-32" />
+                <figure
+                  style={{
+                    backgroundImage: `url(${project.image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                  className="bg-yolo-blue/7 border-b w-full h-32"
+                />
                 <p className="text-black p-4">
-                  <strong>Telegram App</strong>
+                  <strong>{project.name}</strong>
                 </p>
               </div>
             ))}

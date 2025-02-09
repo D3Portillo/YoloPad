@@ -22,17 +22,20 @@ export default function PageProjects() {
         <section className="grid gap-6 mt-8">
           <ProjectItem
             title="YoloPad"
+            image="https://www.yolopad.xyz/opengraph-image.png"
             description="The all-in-one platform to manage your projects."
           />
 
           <ProjectItem
-            title="YoloPad"
-            description="The all-in-one platform to manage your projects."
+            title="IntentionsAI"
+            image="https://cdn.prod.website-files.com/5ff65c460ce39f5ec5681c6a/606dffab53ccc50dd9661962_personal-ai-desktop-app.png"
+            description="Your personal AI assistant to help you stay focused."
           />
 
           <ProjectItem
-            title="YoloPad"
-            description="The all-in-one platform to manage your projects."
+            title="MetaClub App"
+            image="https://cdn.dribbble.com/userupload/5439494/file/original-48826270e8855ceb8af8829a11085291.jpg?format=webp&resize=400x300&vertical=center"
+            description="The best social + productivity app for your team."
           />
         </section>
       </MainContainer>
@@ -43,16 +46,25 @@ export default function PageProjects() {
 function ProjectItem({
   title,
   description,
+  image,
 }: {
   title: string
   description: string
+  image: string
 }) {
   return (
     <Link
       href="#"
       className="bg-white group p-3 flex border border-black/5 hover:drop-shadow-sm rounded-xl overflow-hidden"
     >
-      <div className="bg-yolo-blue/15 h-56 rounded-lg w-80 shrink-0" />
+      <figure
+        style={{
+          backgroundImage: `url(${image})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        className="bg-yolo-blue/15 h-56 rounded-lg w-80 shrink-0"
+      />
       <div className="px-6 pt-2 pb-3.5 flex flex-col w-full h-full">
         <nav className="flex items-center">
           <h3 className="font-semibold flex-grow text-xl">{title}</h3>
