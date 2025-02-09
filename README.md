@@ -43,4 +43,8 @@ And do not forget to create the `.env` file with the required variables explaine
 
 To run, first install all dependencies with `npm i` and finalize by doing `npm run dev`
 
-Thanks
+---
+
+Also, if you are using typescript and had a bad time using jsDocs and want to use `nillion-sv-wrappers` in a typescript environment - you can use the definition file I recreated from the development repo here [lib/nillion/nillion.d.ts](./lib/nillion/nillion.d.ts). I'll probably open a PR suggesting to include the typedefs too.
+
+Thanks.
