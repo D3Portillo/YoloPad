@@ -84,10 +84,31 @@ function ProjectItem({
 
             <div className="text-lg inline-flex items-center gap-2">
               <strong>32,000</strong>
-              <span className="inline-flex -space-x-2">
-                <div className="size-6 rounded-full bg-black" />
-                <div className="size-6 rounded-full bg-slate-600" />
-                <div className="size-6 rounded-full bg-lime-600" />
+              <span className="inline-flex -space-x-1.5">
+                <div
+                  style={{
+                    backgroundImage: `url(https://randomuser.me/api/portraits/men/1.jpg)`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                  className="size-6 rounded-full bg-black"
+                />
+                <div
+                  style={{
+                    backgroundImage: `url(https://randomuser.me/api/portraits/men/13.jpg)`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                  className="size-6 rounded-full bg-slate-600"
+                />
+                <div
+                  style={{
+                    backgroundImage: `url(https://randomuser.me/api/portraits/men/51.jpg)`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                  className="size-6 rounded-full bg-lime-600"
+                />
               </span>
             </div>
           </div>

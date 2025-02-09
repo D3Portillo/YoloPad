@@ -42,7 +42,7 @@ export default function ModalCreateProject({
         <ConnectedOnlyAction>
           <button
             onClick={handleCreateProject}
-            className="bg-black text-white font-semibold px-4 h-12"
+            className="bg-black rounded-xl text-white font-semibold px-4 h-12"
           >
             Create Project
           </button>

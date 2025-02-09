@@ -10,6 +10,7 @@ import asset_logo from "@/app/logo.svg"
 import Link from "next/link"
 import ConnectButton from "./ConnectButtont"
 import { RiSparkling2Fill } from "react-icons/ri"
+import ModalHelp from "../ModalHelp"
 
 export default function TopNavigation() {
   return (
@@ -69,20 +70,24 @@ export default function TopNavigation() {
 
                 <hr className="opacity-50" />
 
-                <ListItem
-                  title={
-                    <nav className="inline-flex gap-2 items-center">
-                      <span>Help me choose</span>
-                      <div className="bg-yolo-green text-[80%] inline-flex items-center gap-1 rounded-full px-2 font-bold">
-                        <FaRobot className="text-lg" />
-                        <span>AGENT</span>
-                      </div>
-                    </nav>
+                <ModalHelp
+                  trigger={
+                    <ListItem
+                      title={
+                        <nav className="inline-flex gap-2 items-center">
+                          <span>Help me choose</span>
+                          <div className="bg-yolo-green text-[80%] inline-flex items-center gap-1 rounded-full px-2 font-bold">
+                            <FaRobot className="text-lg" />
+                            <span>AGENT</span>
+                          </div>
+                        </nav>
+                      }
+                    >
+                      Use our AI agent to help you choose the best fundraising
+                      for your project.
+                    </ListItem>
                   }
-                >
-                  Use our AI agent to help you choose the best fundraising for
-                  your project.
-                </ListItem>
+                />
               </ul>
             </NavigationMenu.Content>
           </NavigationMenu.Item>
