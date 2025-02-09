@@ -5,11 +5,14 @@ import { FaArrowRight } from "react-icons/fa6"
 import MainContainer from "@/components/MainContainer"
 import ModalCreateProject from "@/components/ModalCreateProject"
 
+import asset_main from "@/assets/mascot.png"
+import Image from "next/image"
+
 export default function PageHome() {
   return (
     <Fragment>
       <MainContainer>
-        <section className="mt-24 flex items-center gap-12">
+        <section className="mt-12 flex items-center gap-12">
           <div className="shrink-0 pb-10">
             <h1 className="font-title max-w-[36rem] font-black text-5xl">
               Launch, Fundraise & Scale your Web3 Projects.
@@ -40,10 +43,21 @@ export default function PageHome() {
               </Link>
             </nav>
           </div>
+
+          <div className="flex-grow" />
+
+          <figure className="max-w-xl">
+            <Image
+              className="w-full"
+              placeholder="blur"
+              src={asset_main}
+              alt=""
+            />
+          </figure>
         </section>
       </MainContainer>
 
-      <div className="bg-yolo-blue/3 pt-24 pb-32 mt-32">
+      <div className="bg-yolo-blue/3 pt-24 pb-32 mt-56">
         <main className="w-full max-w-screen-2xl mx-auto px-4 md:px-12">
           <nav className="flex items-center gap-4 justify-between">
             <div>
