@@ -8,6 +8,7 @@ import { Noto_Sans_JP } from "next/font/google"
 import TopNavigation from "@/components/TopNavigation"
 import MainContainer from "@/components/MainContainer"
 import Providers from "./web3/Providers"
+import { Toaster } from "sonner"
 
 const baseFont = Noto_Sans_JP({
   subsets: [],
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${baseFont.className} antialiased`}>
+        <Toaster position="top-center" />
         <Providers>
           <Fragment>
             <MainContainer className="z-2 relative">

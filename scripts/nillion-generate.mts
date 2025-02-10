@@ -32,7 +32,7 @@ async function main() {
 
         const newSchema = await org.createSchema(
           formattedWithTitle,
-          name + "1" // @see https://github.com/oceans404/nillion-sv-example/blob/main/postSchema.js#L15
+          name // @see https://github.com/oceans404/nillion-sv-example/blob/main/postSchema.js#L15
         )
 
         const newSchemaId = newSchema[0].result.data

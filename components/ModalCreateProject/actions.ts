@@ -11,18 +11,21 @@ import type { Address } from "viem"
 export const createProject = async (user: Address, name: string) => {
   const data = {
     name,
+    owner: secretStoredValue(user),
   }
 
   await writeSecretVaultRecord({
-    schemaId: schemas.svUserProject,
+    schemaId: schemas.svProjectWithOwner,
     data: [data],
   })
 }
 
 export const getAllProjects = async (user: Address) => {
   const projects = await readSecretVaultRecord({
-    schemaId: schemas.svUserProject,
+    schemaId: schemas.svProjectWithOwner,
   })
 
-  return projects
+  return projects.filter(
+    (project: any) => project?.owner?.toLowerCase() === user.toLocaleLowerCase()
+  )
 }

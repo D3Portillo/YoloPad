@@ -7,22 +7,30 @@ import { createProject } from "./actions"
 import { useAccount } from "wagmi"
 import { useState } from "react"
 import ConnectedOnlyAction from "../ConnectedOnlyAction"
+import { toast } from "sonner"
+import { useRouter } from "next/navigation"
 
 export default function ModalCreateProject({
   trigger,
 }: {
   trigger: React.ReactNode
 }) {
+  const router = useRouter()
+  const [isOpen, setIsOpen] = useState(false)
   const [name, setName] = useState("")
   const { address } = useAccount()
 
   async function handleCreateProject() {
     if (!name?.trim() || !address) return
-    console.log("Creating project...")
-    createProject(address, name)
+    await createProject(address, name)
+    // Wait for event stack to be empty
+    setTimeout(() => setIsOpen(false))
+    toast.success("🥳 Yaay. Project created")
+    router.push("/profile")
   }
+
   return (
-    <Dialog>
+    <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
       <DialogContent>
         <DialogTitle asChild>
